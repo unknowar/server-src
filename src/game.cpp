@@ -3489,7 +3489,7 @@ bool Game::playerSaySpell(Player* player, SpeakClasses type, const std::string& 
 		if (!g_config.getBoolean(ConfigManager::EMOTE_SPELLS)) {
 			return internalCreatureSay(player, TALKTYPE_SAY, words, false);
 		} else {
-			return internalCreatureSay(player, TALKTYPE_MONSTER_SAY, words, false);
+			return true; //internalCreatureSay(player, TALKTYPE_MONSTER_SAY, words, false);
 		}
 
 	} else if (result == TALKACTION_FAILED) {
